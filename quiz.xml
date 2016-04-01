@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <record model="res.group" id="group_quiz_admin">
+            <field name="name">Quiz Administration</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_quiz_admin">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_quiz_admin"/>
+        </record>
+        <record model="res.user-res.group" id="user_trigger_group_quiz_admin">
+            <field name="user" ref="res.user_trigger"/>
+            <field name="group" ref="group_quiz_admin"/>
+        </record>
+        <record model="res.group" id="group_quiz">
+            <field name="name">Quiz</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_quiz">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_quiz"/>
+        </record>
+        <record model="res.user-res.group" id="user_trigger_group_quiz">
+            <field name="user" ref="res.user_trigger"/>
+            <field name="group" ref="group_quiz"/>
+        </record>
+
+        <record model="ir.ui.view" id="quiz_category_view_form">
+            <field name="model">quiz.category</field>
+            <field name="type">form</field>
+            <field name="name">quiz_category_form</field>
+        </record>
+        <record model="ir.ui.view" id="quiz_category_view_list">
+            <field name="model">quiz.category</field>
+            <field name="type">tree</field>
+            <field name="name">quiz_category_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_quiz_category">
+            <field name="name">Quiz Categories</field>
+            <field name="res_model">quiz.category</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_quiz_category_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="quiz_category_view_list"/>
+            <field name="act_window" ref="act_quiz_category"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_quiz_category_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="quiz_category_view_form"/>
+            <field name="act_window" ref="act_quiz_category"/>
+        </record>
+        <record model="ir.model.access" id="access_quiz_category_admin">
+            <field name="model" search="[('model', '=', 'quiz.category')]"/>
+            <field name="group" ref="group_quiz"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_quiz_category">
+            <field name="model" search="[('model', '=', 'quiz.category')]"/>
+            <field name="group" ref="group_quiz_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+
+        <record model="ir.ui.view" id="quiz_view_form">
+            <field name="model">quiz</field>
+            <field name="type">form</field>
+            <field name="name">quiz_form</field>
+        </record>
+        <record model="ir.ui.view" id="quiz_view_list">
+            <field name="model">quiz</field>
+            <field name="type">tree</field>
+            <field name="name">quiz_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_quiz">
+            <field name="name">Quiz</field>
+            <field name="res_model">quiz</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_quiz_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="quiz_view_list"/>
+            <field name="act_window" ref="act_quiz"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_quiz_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="quiz_view_form"/>
+            <field name="act_window" ref="act_quiz"/>
+        </record>
+        <record model="ir.model.access" id="access_quiz_admin">
+            <field name="model" search="[('model', '=', 'quiz')]"/>
+            <field name="group" ref="group_quiz"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="quiz_option_view_form">
+            <field name="model">quiz.option</field>
+            <field name="type">form</field>
+            <field name="name">quiz_option_form</field>
+        </record>
+        <record model="ir.ui.view" id="quiz_option_view_list">
+            <field name="model">quiz.option</field>
+            <field name="type">tree</field>
+            <field name="name">quiz_option_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_quiz_option">
+            <field name="name">Quiz Option</field>
+            <field name="res_model">quiz.option</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_quiz_option_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="quiz_option_view_list"/>
+            <field name="act_window" ref="act_quiz_option"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_quiz_option_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="quiz_option_view_form"/>
+            <field name="act_window" ref="act_quiz_option"/>
+        </record>
+        <record model="ir.model.access" id="access_quiz_option_admin">
+            <field name="model" search="[('model', '=', 'quiz.option')]"/>
+            <field name="group" ref="group_quiz"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="quiz_question_view_form">
+            <field name="model">quiz.question</field>
+            <field name="type">form</field>
+            <field name="name">quiz_question_form</field>
+        </record>
+        <record model="ir.ui.view" id="quiz_question_view_list">
+            <field name="model">quiz.question</field>
+            <field name="type">tree</field>
+            <field name="name">quiz_question_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_quiz_question">
+            <field name="name">Quiz Question</field>
+            <field name="res_model">quiz.question</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_quiz_question_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="quiz_question_view_list"/>
+            <field name="act_window" ref="act_quiz_question"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_quiz_question_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="quiz_question_view_form"/>
+            <field name="act_window" ref="act_quiz_question"/>
+        </record>
+        <record model="ir.model.access" id="access_quiz_question">
+            <field name="model" search="[('model', '=', 'quiz.question')]"/>
+            <field name="group" ref="group_quiz"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_quiz_question_admin">
+            <field name="model" search="[('model', '=', 'quiz.question')]"/>
+            <field name="group" ref="group_quiz_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="quiz_question_option_view_form">
+            <field name="model">quiz.question.option</field>
+            <field name="type">form</field>
+            <field name="name">quiz_question_option_form</field>
+        </record>
+        <record model="ir.ui.view" id="quiz_question_option_view_list">
+            <field name="model">quiz.question.option</field>
+            <field name="type">tree</field>
+            <field name="name">quiz_question_option_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_quiz_question_option">
+            <field name="name">Quiz Question Option</field>
+            <field name="res_model">quiz.question.option</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_quiz_question_option_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="quiz_question_option_view_list"/>
+            <field name="act_window" ref="act_quiz_question_option"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_quiz_question_option_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="quiz_question_option_view_form"/>
+            <field name="act_window" ref="act_quiz_question_option"/>
+        </record>
+        <record model="ir.model.access" id="access_quiz_question_option">
+            <field name="model" search="[('model', '=', 'quiz.question.option')]"/>
+            <field name="group" ref="group_quiz"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_quiz_question_option_admin">
+            <field name="model" search="[('model', '=', 'quiz.question.option')]"/>
+            <field name="group" ref="group_quiz_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <!-- Menus -->
+        <menuitem id="menu_quiz" name="Quizzes" sequence="1"/>
+
+        <record model="ir.ui.menu-res.group" id="menu_quiz_group_quiz">
+          <field name="menu" ref="menu_quiz"/>
+          <field name="group" ref="group_quiz"/>
+        </record>
+
+        <menuitem id="menu_config" parent="menu_quiz" name="Configuration"
+            sequence="1"/>
+        <record model="ir.ui.menu-res.group" id="menu_quiz_group_quiz_admin">
+          <field name="menu" ref="menu_config"/>
+          <field name="group" ref="group_quiz"/>
+        </record>
+
+        <menuitem action="act_quiz_category" id="menu_quiz_category"
+            parent="menu_config" sequence="10" name="Quiz Categories"/>
+        <menuitem action="act_quiz_question" id="menu_quiz_question"
+            parent="menu_config" sequence="20" name="Quiz Questions"/>
+        <menuitem action="act_quiz_question_option"
+            id="menu_quiz_question_option" parent="menu_quiz_question"
+            sequence="1" name="Quiz Question Options"/>
+        <menuitem action="act_quiz" id="menu_quiz_list" parent="menu_quiz"
+            sequence="10" name="Quizzes"/>
+        <menuitem action="act_quiz_option" id="menu_quiz_option"
+            parent="menu_quiz_list" sequence="1" name="Quiz Options"/>
+    </data>
+</tryton>

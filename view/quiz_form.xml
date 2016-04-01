@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Quiz" cursor="question">
+    <label name="party"/>
+    <field name="party"/>
+    <label name="date"/>
+    <field name="date"/>
+    <newline/>
+    <label name="question"/>
+    <field name="question"/>
+    <label name="type"/>
+    <field name="type"/>
+    <label name="question_text"/>
+    <field name="question_text" colspan="3"/>
+    <label name="answer_options"/>
+    <field name="answer_options" colspan="3"/>
+    <newline/>
+    <label name="answer_text"/>
+    <field name="answer_text" colspan="3"/>
+    <newline/>
+    <label name="answer_integer"/>
+    <field name="answer_integer" colspan="3"/>
+    <newline/>
+    <label name="answer_numeric"/>
+    <field name="answer_numeric" colspan="3"/>
+    <newline/>
+    <label name="state"/>
+    <field name="state"/>
+    <group col="5" id="footer" colspan="2">
+        <label name="correct"/>
+        <field name="correct"/>
+        <button name="submit" string="Submit"/>
+        <button name="draft" string="Draft"/>
+        <button name="evaluate" string="Evaluate"/>
+    </group>
+</form>

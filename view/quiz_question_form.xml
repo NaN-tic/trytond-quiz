@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Quiz Question">
+    <label name="question"/>
+    <field name="question" colspan="3"/>
+    <label name="category"/>
+    <field name="category"/>
+    <label name="active"/>
+    <field name="active"/>
+    <label name="type"/>
+    <field name="type"/>
+    <newline/>
+    <label name="answer_options"/>
+    <field name="answer_options" colspan="3"/>
+    <newline/>
+    <label name="answer_text"/>
+    <field name="answer_text" colspan="3"/>
+    <newline/>
+    <label name="answer_integer"/>
+    <field name="answer_integer" colspan="3"/>
+    <newline/>
+    <label name="answer_numeric"/>
+    <field name="answer_numeric" colspan="3"/>
+    <newline/>
+    <label name="explanation"/>
+    <field name="explanation" colspan="3"/>
+    <newline/>
+    <button name="create_quiz" string="Create Quiz"/>
+</form>

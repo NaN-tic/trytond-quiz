@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Quiz Option">
+    <label name="quiz"/>
+    <field name="quiz"/>
+    <newline/>
+    <label name="option"/>
+    <field name="option"/>
+    <newline/>
+    <label name="text"/>
+    <field name="text" colspan="3"/>
+    <label name="checked"/>
+    <field name="checked"/>
+    <label name="correct"/>
+    <field name="correct"/>
+</form>

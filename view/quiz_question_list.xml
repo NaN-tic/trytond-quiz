@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tree string="Quiz Question">
+    <field name="question"/>
+    <field name="category"/>
+    <field name="type"/>
+    <button name="create_quiz" string="Create Quiz"/>
+    <field name="active" tree_invisible="1"/>
+</tree>
