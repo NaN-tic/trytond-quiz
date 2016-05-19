@@ -69,8 +69,8 @@ msgid "Question"
 msgstr "Pregunta"
 
 msgctxt "field:quiz,question_text:"
-msgid "Question"
-msgstr "Pregunta"
+msgid "Question Text"
+msgstr "Text pregunta"
 
 msgctxt "field:quiz,rec_name:"
 msgid "Name"

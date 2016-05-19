@@ -161,7 +161,7 @@ class Quiz(Workflow, ModelSQL, ModelView):
         ondelete='RESTRICT', states={
             'readonly': Eval('state') != 'draft',
             })
-    question_text = fields.Function(fields.Text('Question'),
+    question_text = fields.Function(fields.Text('Question Text'),
         'get_question_text')
     type = fields.Function(fields.Selection(TYPES, 'Type', required=True),
         'get_type')

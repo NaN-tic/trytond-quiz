@@ -11,8 +11,8 @@
     <field name="question"/>
     <label name="type"/>
     <field name="type"/>
-    <label name="question_text"/>
-    <field name="question_text" colspan="3"/>
+    <separator name="question_text" colspan="4"/>
+    <field name="question_text" colspan="4"/>
     <label name="answer_options"/>
     <field name="answer_options" colspan="3"/>
     <newline/>
