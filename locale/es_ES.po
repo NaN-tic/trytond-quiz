@@ -1,0 +1,429 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:quiz.question.option:"
+msgid ""
+"Question option \"%s\" has been used in some quizzes. You may consider "
+"creating a new question. Are you sure you want to modify it?"
+msgstr ""
+"La opción \"%s\" ya se usa en otras encuestas. Es mejor crear una nueva "
+"pregunta. ¿Está seguro de modificar la opción?"
+
+msgctxt "error:quiz.question:"
+msgid "Question \"%s\" has been used in some quizzes. Type cannot be changed."
+msgstr ""
+"La pregunta \"%s\" ya se usa en otras encuestas es usada en otras encuestas."
+" El tipo no se puede modificar."
+
+msgctxt "error:quiz.question:"
+msgid ""
+"Question \"%s\" has been used in some quizzes. You may consider creating a "
+"new question. Are you sure you want to change it?"
+msgstr ""
+"La pregunta \"%s\" ya es usada en otras enc es usada en otras encuestas. Es "
+"mejor crear una nueva pregunta. ¿Está seguro de modificar la pregunta?"
+
+msgctxt "field:quiz,answer_integer:"
+msgid "Answer"
+msgstr "Respuesta"
+
+msgctxt "field:quiz,answer_numeric:"
+msgid "Answer"
+msgstr "Respuesta"
+
+msgctxt "field:quiz,answer_options:"
+msgid "Answer"
+msgstr "Respuesta"
+
+msgctxt "field:quiz,answer_text:"
+msgid "Answer"
+msgstr "Respuesta"
+
+msgctxt "field:quiz,correct:"
+msgid "Correct?"
+msgstr "¿Correcto?"
+
+msgctxt "field:quiz,create_date:"
+msgid "Create Date"
+msgstr "Fecha creaciónn"
+
+msgctxt "field:quiz,create_uid:"
+msgid "Create User"
+msgstr "Usuario creaciónn"
+
+msgctxt "field:quiz,date:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:quiz,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:quiz,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:quiz,question:"
+msgid "Question"
+msgstr "Pregunta"
+
+msgctxt "field:quiz,question_text:"
+msgid "Question"
+msgstr "Pregunta"
+
+msgctxt "field:quiz,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:quiz,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:quiz,type:"
+msgid "Type"
+msgstr "Tipos"
+
+msgctxt "field:quiz,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:quiz,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:quiz.category,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:quiz.category,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:quiz.category,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:quiz.category,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:quiz.category,parent:"
+msgid "Parent"
+msgstr "Padre"
+
+msgctxt "field:quiz.category,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:quiz.category,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:quiz.category,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:quiz.option,checked:"
+msgid "Check?"
+msgstr "¿Marcar?"
+
+msgctxt "field:quiz.option,correct:"
+msgid "Correct?"
+msgstr "¿Correcto?"
+
+msgctxt "field:quiz.option,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:quiz.option,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:quiz.option,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:quiz.option,option:"
+msgid "Option"
+msgstr "Opción"
+
+msgctxt "field:quiz.option,quiz:"
+msgid "Quiz"
+msgstr "Examen"
+
+msgctxt "field:quiz.option,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:quiz.option,text:"
+msgid "Text"
+msgstr "Texto"
+
+msgctxt "field:quiz.option,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:quiz.option,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:quiz.question,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:quiz.question,answer_integer:"
+msgid "Correct Answer"
+msgstr "Respuesta correcta"
+
+msgctxt "field:quiz.question,answer_numeric:"
+msgid "Correct Answer"
+msgstr "Respuesta correcta"
+
+msgctxt "field:quiz.question,answer_options:"
+msgid "Options"
+msgstr "Opciones"
+
+msgctxt "field:quiz.question,answer_text:"
+msgid "Correct Answer"
+msgstr "Respuesta correcta"
+
+msgctxt "field:quiz.question,category:"
+msgid "Category"
+msgstr "Categoría"
+
+msgctxt "field:quiz.question,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:quiz.question,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:quiz.question,explanation:"
+msgid "Explanation"
+msgstr "Explicación"
+
+msgctxt "field:quiz.question,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:quiz.question,question:"
+msgid "Question"
+msgstr "Pregunta"
+
+msgctxt "field:quiz.question,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:quiz.question,type:"
+msgid "Type"
+msgstr "Tipos"
+
+msgctxt "field:quiz.question,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:quiz.question,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:quiz.question.option,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:quiz.question.option,correct:"
+msgid "Correct?"
+msgstr "¿Correcto?"
+
+msgctxt "field:quiz.question.option,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:quiz.question.option,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:quiz.question.option,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:quiz.question.option,question:"
+msgid "Question"
+msgstr "Examen"
+
+msgctxt "field:quiz.question.option,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:quiz.question.option,text:"
+msgid "Text"
+msgstr "Texto"
+
+msgctxt "field:quiz.question.option,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:quiz.question.option,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "help:quiz.question.option,correct:"
+msgid "Mark as correct if this answer is valid."
+msgstr "Marcar com a válido y la resposta es correcta."
+
+msgctxt "model:ir.action,name:act_quiz"
+msgid "Quiz"
+msgstr "Examen"
+
+msgctxt "model:ir.action,name:act_quiz_category"
+msgid "Quiz Categories"
+msgstr "Categorias examenes"
+
+msgctxt "model:ir.action,name:act_quiz_option"
+msgid "Quiz Option"
+msgstr "Opción examen"
+
+msgctxt "model:ir.action,name:act_quiz_question"
+msgid "Quiz Question"
+msgstr "Pregunta examen"
+
+msgctxt "model:ir.action,name:act_quiz_question_option"
+msgid "Quiz Question Option"
+msgstr "Opciones pregunta examen"
+
+msgctxt "model:ir.ui.menu,name:menu_config"
+msgid "Configuration"
+msgstr "Configuración"
+
+msgctxt "model:ir.ui.menu,name:menu_quiz"
+msgid "Quizzes"
+msgstr "Examenes"
+
+msgctxt "model:ir.ui.menu,name:menu_quiz_category"
+msgid "Quiz Categories"
+msgstr "Categorias examen"
+
+msgctxt "model:ir.ui.menu,name:menu_quiz_list"
+msgid "Quizzes"
+msgstr "Examenes"
+
+msgctxt "model:ir.ui.menu,name:menu_quiz_option"
+msgid "Quiz Options"
+msgstr "Opciones examen"
+
+msgctxt "model:ir.ui.menu,name:menu_quiz_question"
+msgid "Quiz Questions"
+msgstr "Preguntas examen"
+
+msgctxt "model:ir.ui.menu,name:menu_quiz_question_option"
+msgid "Quiz Question Options"
+msgstr "Opciones preguntas examen"
+
+msgctxt "model:quiz,name:"
+msgid "Quiz"
+msgstr "Examen"
+
+msgctxt "model:quiz.category,name:"
+msgid "Quiz Category"
+msgstr "Categoría examen"
+
+msgctxt "model:quiz.option,name:"
+msgid "Quiz Option"
+msgstr "Opción examen"
+
+msgctxt "model:quiz.question,name:"
+msgid "Quiz Question"
+msgstr "Pregunta examen"
+
+msgctxt "model:quiz.question.option,name:"
+msgid "Quiz Question Option"
+msgstr "Opciones pregunta examen"
+
+msgctxt "model:res.group,name:group_quiz"
+msgid "Quiz"
+msgstr "Examen"
+
+msgctxt "model:res.group,name:group_quiz_admin"
+msgid "Quiz Administrator"
+msgstr "Administración de examenes"
+
+msgctxt "selection:quiz,state:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "selection:quiz,state:"
+msgid "Evaluated"
+msgstr "Avaluado"
+
+msgctxt "selection:quiz,state:"
+msgid "Submitted"
+msgstr "Enviado"
+
+msgctxt "selection:quiz,type:"
+msgid "Integer"
+msgstr "Entero"
+
+msgctxt "selection:quiz,type:"
+msgid "Numeric"
+msgstr "Numérico"
+
+msgctxt "selection:quiz,type:"
+msgid "Options"
+msgstr "Opciones"
+
+msgctxt "selection:quiz,type:"
+msgid "Text"
+msgstr "Texto"
+
+msgctxt "selection:quiz.question,type:"
+msgid "Integer"
+msgstr "Entero"
+
+msgctxt "selection:quiz.question,type:"
+msgid "Numeric"
+msgstr "Numérico"
+
+msgctxt "selection:quiz.question,type:"
+msgid "Options"
+msgstr "Opciones"
+
+msgctxt "selection:quiz.question,type:"
+msgid "Text"
+msgstr "Texto"
+
+msgctxt "view:quiz.category:"
+msgid "Quiz Categories"
+msgstr "Categorias examen"
+
+msgctxt "view:quiz.option:"
+msgid "Quiz Option"
+msgstr "Opción examen"
+
+msgctxt "view:quiz.question.option:"
+msgid "Quiz Question Option"
+msgstr "Opciones pregunta examen"
+
+msgctxt "view:quiz.question:"
+msgid "Create Quiz"
+msgstr "Crear examen"
+
+msgctxt "view:quiz.question:"
+msgid "Quiz Question"
+msgstr "Pregunta enquesta"
+
+msgctxt "view:quiz:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "view:quiz:"
+msgid "Evaluate"
+msgstr "Evaluar"
+
+msgctxt "view:quiz:"
+msgid "Quiz"
+msgstr "Examen"
+
+msgctxt "view:quiz:"
+msgid "Submit"
+msgstr "Enviar"

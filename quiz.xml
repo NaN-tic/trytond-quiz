@@ -4,7 +4,7 @@
 <tryton>
     <data>
         <record model="res.group" id="group_quiz_admin">
-            <field name="name">Quiz Administration</field>
+            <field name="name">Quiz Administrator</field>
         </record>
         <record model="res.user-res.group" id="user_admin_group_quiz_admin">
             <field name="user" ref="res.user_admin"/>
