@@ -26,5 +26,5 @@
     <label name="explanation"/>
     <field name="explanation" colspan="3"/>
     <newline/>
-    <button name="create_quiz" string="Create Quiz"/>
+    <button name="create_quiz" string="Create Quiz" colspan="4"/>
 </form>
