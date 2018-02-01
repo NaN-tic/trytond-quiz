@@ -151,7 +151,6 @@ class QuizQuestionOption(ModelSQL, ModelView):
 class Quiz(Workflow, ModelSQL, ModelView):
     'Quiz'
     __name__ = 'quiz'
-    _rec_name = 'question'
     party = fields.Many2One('party.party', 'Party', required=True,
         ondelete='RESTRICT')
     date = fields.Date('Date', required=True, states={
@@ -323,7 +322,6 @@ class Quiz(Workflow, ModelSQL, ModelView):
 class QuizOption(ModelSQL, ModelView):
     'Quiz Option'
     __name__ = 'quiz.option'
-    _rec_name = 'option'
     quiz = fields.Many2One('quiz', 'Quiz', required=True, ondelete='CASCADE')
     option = fields.Many2One('quiz.question.option', 'Option', required=True,
         ondelete='RESTRICT')
