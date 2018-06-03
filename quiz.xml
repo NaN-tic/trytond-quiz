@@ -202,6 +202,19 @@
             <field name="perm_delete" eval="False"/>
         </record>
 
+        <record model="ir.model.button" id="create_quiz_button">
+            <field name="name">create_quiz</field>
+            <field name="string">Create Quiz</field>
+            <field name="model" search="[('model', '=', 'quiz.question')]"/>
+        </record>
+
+        <record model="ir.model.button-res.group"
+            id="quiz_evaluat_button_group_account">
+            <field name="button" ref="create_quiz_button"/>
+            <field name="group" ref="access_quiz_question"/>
+        </record>
+
+
         <record model="ir.ui.view" id="quiz_question_option_view_form">
             <field name="model">quiz.question.option</field>
             <field name="type">form</field>
@@ -248,6 +261,42 @@
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.button" id="quiz_evaluate_button">
+            <field name="name">evaluate</field>
+            <field name="string">Evaluate</field>
+            <field name="model" search="[('model', '=', 'quiz')]"/>
+        </record>
+
+        <record model="ir.model.button-res.group"
+            id="quiz_evaluate_button_group_account">
+            <field name="button" ref="quiz_evaluate_button"/>
+            <field name="group" ref="access_quiz"/>
+        </record>
+
+        <record model="ir.model.button" id="quiz_draft_button">
+            <field name="name">draft</field>
+            <field name="string">Draft</field>
+            <field name="model" search="[('model', '=', 'quiz')]"/>
+        </record>
+
+        <record model="ir.model.button-res.group"
+            id="quiz_draft_button_group_account">
+            <field name="button" ref="quiz_draft_button"/>
+            <field name="group" ref="access_quiz"/>
+        </record>
+
+        <record model="ir.model.button" id="quiz_submit_button">
+            <field name="name">submit</field>
+            <field name="string">Submit</field>
+            <field name="model" search="[('model', '=', 'quiz')]"/>
+        </record>
+
+        <record model="ir.model.button-res.group"
+            id="quiz_submit_button_group_account">
+            <field name="button" ref="quiz_submit_button"/>
+            <field name="group" ref="access_quiz"/>
         </record>
 
         <!-- Menus -->
