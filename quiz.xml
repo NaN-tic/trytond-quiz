@@ -100,7 +100,7 @@
         </record>
         <record model="ir.model.access" id="access_quiz_quiz">
             <field name="model" search="[('model', '=', 'quiz')]"/>
-            <field name="group" ref="group_quiz"/>
+            <field name="group" ref="group_quiz_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
@@ -108,6 +108,7 @@
         </record>
         <record model="ir.model.access" id="access_quiz">
             <field name="model" search="[('model', '=', 'quiz')]"/>
+            <field name="group" ref="group_quiz"/>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
@@ -272,7 +273,7 @@
         <record model="ir.model.button-res.group"
             id="quiz_evaluate_button_group_account">
             <field name="button" ref="quiz_evaluate_button"/>
-            <field name="group" ref="access_quiz"/>
+            <field name="group" ref="group_quiz"/>
         </record>
 
         <record model="ir.model.button" id="quiz_draft_button">
@@ -284,7 +285,7 @@
         <record model="ir.model.button-res.group"
             id="quiz_draft_button_group_account">
             <field name="button" ref="quiz_draft_button"/>
-            <field name="group" ref="access_quiz"/>
+            <field name="group" ref="group_quiz"/>
         </record>
 
         <record model="ir.model.button" id="quiz_submit_button">
@@ -296,7 +297,7 @@
         <record model="ir.model.button-res.group"
             id="quiz_submit_button_group_account">
             <field name="button" ref="quiz_submit_button"/>
-            <field name="group" ref="access_quiz"/>
+            <field name="group" ref="group_quiz"/>
         </record>
 
         <!-- Menus -->
