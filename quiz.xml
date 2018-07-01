@@ -211,7 +211,7 @@
         <record model="ir.model.button-res.group"
             id="quiz_evaluat_button_group_account">
             <field name="button" ref="create_quiz_button"/>
-            <field name="group" ref="access_quiz_question"/>
+            <field name="group" ref="group_quiz_admin"/>
         </record>
 
 
