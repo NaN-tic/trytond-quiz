@@ -98,7 +98,15 @@
             <field name="view" ref="quiz_view_form"/>
             <field name="act_window" ref="act_quiz"/>
         </record>
-        <record model="ir.model.access" id="access_quiz_quiz">
+        <record model="ir.model.access" id="access_quiz">
+            <field name="model" search="[('model', '=', 'quiz')]"/>
+            <field name="group" eval="None"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_quiz_quiz_admin">
             <field name="model" search="[('model', '=', 'quiz')]"/>
             <field name="group" ref="group_quiz_admin"/>
             <field name="perm_read" eval="True"/>
@@ -106,7 +114,7 @@
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <record model="ir.model.access" id="access_quiz">
+        <record model="ir.model.access" id="access_quiz_quiz">
             <field name="model" search="[('model', '=', 'quiz')]"/>
             <field name="group" ref="group_quiz"/>
             <field name="perm_read" eval="False"/>
