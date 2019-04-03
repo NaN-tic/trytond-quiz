@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data group="1">
+        <record model="ir.message" id="msg_update_warning">
+            <field name="text">Question "%(name)s" has been used in some quizzes. You may consider creating a new question. Are you sure you want to change it?</field>
+        </record>
+        <record model="ir.message" id="msg_update_forbidden">
+            <field name="text">Question "%(name)s" has been used in some quizzes. Type cannot be changed.</field>
+        </record>
+    </data>
+</tryton>

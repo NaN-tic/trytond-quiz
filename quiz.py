@@ -2,6 +2,8 @@ from trytond.model import ModelSQL, ModelView, Workflow, fields
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.pool import Pool
+from trytond.i18n import gettext
+from trytond.exceptions import UserError
 
 __all__ = ['QuizCategory', 'QuizQuestion', 'QuizQuestionOption', 'Quiz',
     'QuizOption']
@@ -63,13 +65,6 @@ class QuizQuestion(ModelSQL, ModelView):
                     'icon': 'tryton-new',
                     },
                 })
-        cls._error_messages.update({
-                'update_warning': ('Question "%s" has been used in some '
-                    'quizzes. You may consider creating a new question. Are '
-                    'you sure you want to change it?'),
-                'update_forbidden': ('Question "%s" has been used in some '
-                    'quizzes. Type cannot be changed.')
-                })
 
     @staticmethod
     def default_active():
@@ -106,8 +101,12 @@ class QuizQuestion(ModelSQL, ModelView):
             if not quizzes:
                 continue
             if 'type' in values:
-                cls.raise_user_error('update_forbidden', quizzes[0].rec_name)
-            cls.raise_user_warning('update_warning', quizzes[0].rec_name)
+                raise UserError(gettext('quiz.msg_update_forbidden',
+                    name=options[0].rec_name,
+                    ))
+            raise UserError(gettext('quiz.msg_update_warning',
+                name=options[0].rec_name,
+                ))
         super(QuizQuestion, cls).write(*args)
 
 
@@ -122,15 +121,6 @@ class QuizQuestionOption(ModelSQL, ModelView):
     correct = fields.Boolean('Correct?', help='Mark as correct if this answer '
         'is valid.')
 
-    @classmethod
-    def __setup__(cls):
-        super(QuizQuestionOption, cls).__setup__()
-        cls._error_messages.update({
-                'update_warning': ('Question option "%s" has been used in '
-                    'some quizzes. You may consider creating a new question. '
-                    'Are you sure you want to modify it?'),
-                })
-
     @staticmethod
     def default_active():
         return True
@@ -144,7 +134,10 @@ class QuizQuestionOption(ModelSQL, ModelView):
                     ('option', 'in', [x.id for x in qoptions]),
                     ], limit=1)
             if options:
-                cls.raise_user_warning('update_warning', options[0].rec_name)
+                raise UserError(gettext('quiz.msg_update_warning',
+                    name=options[0].rec_name,
+                    ))
+
         super(QuizQuestionOption, cls).write(*args)
 
 
