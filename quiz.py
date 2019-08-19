@@ -194,11 +194,11 @@ class Quiz(Workflow, ModelSQL, ModelView):
         cls._buttons.update({
                 'submit': {
                     'invisible': Eval('state') != 'draft',
-                    'icon': 'tryton-go-next',
+                    'icon': 'tryton-forward',
                     },
                 'draft': {
                     'invisible': Eval('state') != 'submitted',
-                    'icon': 'tryton-go-previous',
+                    'icon': 'tryton-back',
                     },
                 'evaluate': {
                     'invisible': Eval('state') != 'submitted',
