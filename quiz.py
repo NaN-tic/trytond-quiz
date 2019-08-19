@@ -102,10 +102,10 @@ class QuizQuestion(ModelSQL, ModelView):
                 continue
             if 'type' in values:
                 raise UserError(gettext('quiz.msg_update_forbidden',
-                    name=options[0].rec_name,
+                    name=quizzes[0].rec_name,
                     ))
             raise UserError(gettext('quiz.msg_update_warning',
-                name=options[0].rec_name,
+                name=quizzes[0].rec_name,
                 ))
         super(QuizQuestion, cls).write(*args)
 
