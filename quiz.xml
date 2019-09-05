@@ -325,5 +325,12 @@
             sequence="10" name="Quizzes"/>
         <menuitem action="act_quiz_option" id="menu_quiz_option"
             parent="menu_quiz_list" sequence="1" name="Quiz Options"/>
+
+        <!-- Icons -->
+        <record model="ir.ui.icon" id="company_icon">
+            <field name="name">tryton-new</field>
+            <field name="path">icons/tryton-new.svg</field>
+        </record>
+
     </data>
 </tryton>
