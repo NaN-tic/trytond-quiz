@@ -30,8 +30,8 @@
     <group col="5" id="footer" colspan="2">
         <label name="correct"/>
         <field name="correct"/>
-        <button name="submit" string="Submit"/>
-        <button name="draft" string="Draft"/>
-        <button name="evaluate" string="Evaluate"/>
+        <button name="submit"/>
+        <button name="draft"/>
+        <button name="evaluate"/>
     </group>
 </form>
