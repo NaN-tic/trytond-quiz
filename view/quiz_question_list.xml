@@ -5,6 +5,6 @@
     <field name="question"/>
     <field name="category"/>
     <field name="type"/>
-    <button name="create_quiz" string="Create Quiz"/>
+    <button name="create_quiz"/>
     <field name="active" tree_invisible="1"/>
 </tree>
