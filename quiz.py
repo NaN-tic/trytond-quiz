@@ -1,4 +1,4 @@
-from trytond.model import ModelSQL, ModelView, Workflow, fields
+from trytond.model import ModelSQL, ModelView, Workflow, DeactivableMixin, fields
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.pool import Pool
@@ -30,12 +30,11 @@ class QuizCategory(ModelSQL, ModelView):
         return res + self.name
 
 
-class QuizQuestion(ModelSQL, ModelView):
+class QuizQuestion(DeactivableMixin, ModelSQL, ModelView):
     'Quiz Question'
     __name__ = 'quiz.question'
     _rec_name = 'question'
     question = fields.Text('Question', required=True)
-    active = fields.Boolean('Active')
     type = fields.Selection(TYPES, 'Type', required=True)
     category = fields.Many2One('quiz.category', 'Category', required=True)
     answer_options = fields.One2Many('quiz.question.option', 'question',
@@ -65,10 +64,6 @@ class QuizQuestion(ModelSQL, ModelView):
                     'icon': 'tryton-new',
                     },
                 })
-
-    @staticmethod
-    def default_active():
-        return True
 
     @staticmethod
     def default_type():
@@ -110,20 +105,15 @@ class QuizQuestion(ModelSQL, ModelView):
         super(QuizQuestion, cls).write(*args)
 
 
-class QuizQuestionOption(ModelSQL, ModelView):
+class QuizQuestionOption(DeactivableMixin, ModelSQL, ModelView):
     'Quiz Question Option'
     __name__ = 'quiz.question.option'
     _rec_name = 'text'
     question = fields.Many2One('quiz.question', 'Question', required=True,
         ondelete='CASCADE')
-    active = fields.Boolean('Active')
     text = fields.Text('Text')
     correct = fields.Boolean('Correct?', help='Mark as correct if this answer '
         'is valid.')
-
-    @staticmethod
-    def default_active():
-        return True
 
     @classmethod
     def write(cls, *args):
