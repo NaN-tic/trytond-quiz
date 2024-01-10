@@ -41,19 +41,19 @@ class QuizQuestion(DeactivableMixin, ModelSQL, ModelView):
         'Options', states={
             'invisible': Eval('type') != 'options',
             'required': Eval('type') == 'options',
-            }, depends=['type'])
+            })
     answer_text = fields.Text('Correct Answer', states={
             'invisible': Eval('type') != 'text',
             'required': Eval('type') == 'text',
-            }, depends=['type'])
+            })
     answer_integer = fields.Integer('Correct Answer', states={
             'invisible': Eval('type') != 'integer',
             'required': Eval('type') == 'integer',
-            }, depends=['type'])
+            })
     answer_numeric = fields.Numeric('Correct Answer', digits=(16, 4), states={
             'invisible': Eval('type') != 'numeric',
             'required': Eval('type') == 'numeric',
-            }, depends=['type'])
+            })
     explanation = fields.Text('Explanation')
 
     @classmethod
@@ -153,24 +153,24 @@ class Quiz(Workflow, ModelSQL, ModelView):
             'required': (Eval('type') == 'options') & (Eval('state') !=
                 'draft'),
             'readonly': Eval('state') != 'draft',
-            }, depends=['type', 'state'])
+            })
     answer_text = fields.Text('Answer', states={
             'invisible': Eval('type') != 'text',
             'required': (Eval('type') == 'text') & (Eval('state') != 'draft'),
             'readonly': Eval('state') != 'draft',
-            }, depends=['type', 'state'])
+            })
     answer_integer = fields.Integer('Answer', states={
             'invisible': Eval('type') != 'integer',
             'required': (Eval('type') == 'integer') & (Eval('state') !=
                 'draft'),
             'readonly': Eval('state') != 'draft',
-            }, depends=['type', 'state'])
+            })
     answer_numeric = fields.Numeric('Answer', digits=(16, 4), states={
             'invisible': Eval('type') != 'numeric',
             'required': (Eval('type') == 'numeric') & (Eval('state') !=
                 'draft'),
             'readonly': Eval('state') != 'draft',
-            }, depends=['type', 'state'])
+            })
     state = fields.Selection([
             ('draft', 'Draft'),
             ('submitted', 'Submitted'),
