@@ -42,7 +42,7 @@
             <field name="act_window" ref="act_quiz_category"/>
         </record>
         <record model="ir.model.access" id="access_quiz_category_admin">
-            <field name="model" search="[('model', '=', 'quiz.category')]"/>
+            <field name="model">quiz.category</field>
             <field name="group" ref="group_quiz"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -50,7 +50,7 @@
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_quiz_category_quiz">
-            <field name="model" search="[('model', '=', 'quiz.category')]"/>
+            <field name="model">quiz.category</field>
             <field name="group" ref="group_quiz_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -58,7 +58,7 @@
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_quiz_category">
-            <field name="model" search="[('model', '=', 'quiz.category')]"/>
+            <field name="model">quiz.category</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
@@ -90,7 +90,7 @@
             <field name="act_window" ref="act_quiz"/>
         </record>
         <record model="ir.model.access" id="access_quiz">
-            <field name="model" search="[('model', '=', 'quiz')]"/>
+            <field name="model">quiz</field>
             <field name="group" eval="None"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -98,7 +98,7 @@
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_quiz_quiz_admin">
-            <field name="model" search="[('model', '=', 'quiz')]"/>
+            <field name="model">quiz</field>
             <field name="group" ref="group_quiz_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -106,7 +106,7 @@
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_quiz_quiz">
-            <field name="model" search="[('model', '=', 'quiz')]"/>
+            <field name="model">quiz</field>
             <field name="group" ref="group_quiz"/>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
@@ -139,7 +139,7 @@
             <field name="act_window" ref="act_quiz_option"/>
         </record>
         <record model="ir.model.access" id="access_quiz_option_quiz">
-            <field name="model" search="[('model', '=', 'quiz.option')]"/>
+            <field name="model">quiz.option</field>
             <field name="group" ref="group_quiz"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -147,7 +147,7 @@
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_quiz_option">
-            <field name="model" search="[('model', '=', 'quiz.option')]"/>
+            <field name="model">quiz.option</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
@@ -179,7 +179,7 @@
             <field name="act_window" ref="act_quiz_question"/>
         </record>
         <record model="ir.model.access" id="access_quiz_question_quiz">
-            <field name="model" search="[('model', '=', 'quiz.question')]"/>
+            <field name="model">quiz.question</field>
             <field name="group" ref="group_quiz"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -187,7 +187,7 @@
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_quiz_question_admin">
-            <field name="model" search="[('model', '=', 'quiz.question')]"/>
+            <field name="model">quiz.question</field>
             <field name="group" ref="group_quiz_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -195,7 +195,7 @@
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_quiz_question">
-            <field name="model" search="[('model', '=', 'quiz.question')]"/>
+            <field name="model">quiz.question</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
@@ -205,7 +205,7 @@
         <record model="ir.model.button" id="create_quiz_button">
             <field name="name">create_quiz</field>
             <field name="string">Create Quiz</field>
-            <field name="model" search="[('model', '=', 'quiz.question')]"/>
+            <field name="model">quiz.question</field>
         </record>
 
         <record model="ir.model.button-res.group"
@@ -240,7 +240,7 @@
             <field name="act_window" ref="act_quiz_question_option"/>
         </record>
         <record model="ir.model.access" id="access_quiz_question_option_quiz">
-            <field name="model" search="[('model', '=', 'quiz.question.option')]"/>
+            <field name="model">quiz.question.option</field>
             <field name="group" ref="group_quiz"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -248,7 +248,7 @@
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_quiz_question_option_admin">
-            <field name="model" search="[('model', '=', 'quiz.question.option')]"/>
+            <field name="model">quiz.question.option</field>
             <field name="group" ref="group_quiz_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -256,7 +256,7 @@
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_quiz_question_option">
-            <field name="model" search="[('model', '=', 'quiz.question.option')]"/>
+            <field name="model">quiz.question.option</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
@@ -266,7 +266,7 @@
         <record model="ir.model.button" id="quiz_evaluate_button">
             <field name="name">evaluate</field>
             <field name="string">Evaluate</field>
-            <field name="model" search="[('model', '=', 'quiz')]"/>
+            <field name="model">quiz</field>
         </record>
 
         <record model="ir.model.button-res.group"
@@ -278,7 +278,7 @@
         <record model="ir.model.button" id="quiz_draft_button">
             <field name="name">draft</field>
             <field name="string">Draft</field>
-            <field name="model" search="[('model', '=', 'quiz')]"/>
+            <field name="model">quiz</field>
         </record>
 
         <record model="ir.model.button-res.group"
@@ -290,7 +290,7 @@
         <record model="ir.model.button" id="quiz_submit_button">
             <field name="name">submit</field>
             <field name="string">Submit</field>
-            <field name="model" search="[('model', '=', 'quiz')]"/>
+            <field name="model">quiz</field>
         </record>
 
         <record model="ir.model.button-res.group"
